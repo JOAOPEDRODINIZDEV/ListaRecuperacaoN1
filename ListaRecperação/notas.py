@@ -1,10 +1,18 @@
-notas = []  
+def calcular_media(notas,soma):
+    media = soma / len(notas)
+    
+    return media
 
-for i in range(1, 11):
-    n = float(input("Digite a nota do aluno: "))
-    notas.append(n)  
+notas = []
+soma = 0
 
-soma = sum(notas) 
-media = soma / len(notas) 
+for i in range(10):
+    n = float(input(f"Digite a nota do {i+1}° aluno : "))
+    notas.append(n)
+    soma += n
+    
+media = calcular_media(notas,soma)
 
-print("A média dos alunos é: {}".format(media))
+
+
+print("\nA média dos alunos é: {:.2f}".format(media))
