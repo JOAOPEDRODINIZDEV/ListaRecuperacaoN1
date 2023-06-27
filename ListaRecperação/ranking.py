@@ -1,10 +1,15 @@
+
 livros = {}
 
-for i in range(1, 5):
-    livro = input(f"Digite o {i} nome do livro: ")
-    livros[i] = livro
+qtd_livros = int(input("Digite a Quantidade de Livros: "))
 
-print("\nRanking de Mais Vendido")
+for i in range(qtd_livros):
+    livro = input(f"\nDigite o {i+1}° nome do livro: ")
+    posicao = int(input("\nDigite a posição do livro: "))
+    livros[posicao] = livro
 
-for indice, livro in livros.items():
+print("\nRanking Dos Livros")
+
+for indice, livro in sorted(livros.items()):
     print(f"{indice} - {livro}")
+    
